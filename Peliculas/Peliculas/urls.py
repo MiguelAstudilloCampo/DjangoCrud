@@ -26,6 +26,8 @@ urlpatterns = [
     path('vistaAgregargenero/', views.vistaAgregargenero),
     path('agregarGenero/', views.agregarGenero),
     path('ListarPeliculas/', views.listarPeliculas),
+    path('vistaAgregarPelicula/', views.vistaAgregarPeliculas),
+    path('agregarPelicula/', views.agregarPelicula),
 ]
 
 if settings.DEBUG:
