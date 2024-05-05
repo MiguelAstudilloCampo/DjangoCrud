@@ -18,6 +18,8 @@
     <div class=" p-4 d-flex flex-column align-items-center justify-content-center gap-4">
         <div class="grande container col-5 p-4 d-flex flex-column align-items-center justify-content-center">
             <h2>Agregar Pelicula</h2>
+            <a class="btn btn-secondary" href="/">Inicio</a>
+
             <form action="/agregarPelicula/" method="post" enctype="multipart/form-data" class="d-flex flex-column gap-4 align-items-center justify-content-center ">
                 @{% csrf_token %}
                 <div class="d-flex flex-column gap-1">
@@ -38,7 +40,7 @@
                 </div>
                 <div class="d-flex flex-column gap-1">
                     <span>Sinopsis:</span>
-                    <input name="sinop" cols="30" id="" type="text">
+                    <textarea cols="50" rows="3" type="text" name="sinop" value=""></textarea>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center gap-1">
                     <span>Foto:</span>
@@ -54,8 +56,9 @@
                         {% endfor %}
                     </select>
                 </div>
-                <div>
+                <div class="d-flex gap-4">
                     <button class="btn btn-primary">Aceptar</button>
+                    <a class="btn btn-danger" href="/">Cancelar</a>
                 </div>
                 <div>
                     {{mensaje}}
